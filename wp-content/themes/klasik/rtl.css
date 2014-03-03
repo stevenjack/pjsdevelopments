@@ -1,0 +1,48 @@
+/*
+Theme Name: Klasik
+Description: Adds support for languages written in a Right To Left (RTL) direction.
+It's easy, just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+See http://codex.wordpress.org/Right_to_Left_Language_Support
+*/
+
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+caption,
+th,
+td {
+	text-align: right;
+}
+
+/* Klasik Layout */
+#logoimg a{direction: ltr;}
+.pagetitle{float:right;}
+
+.entry-utility .user, .entry-utility .tag, .entry-utility .like{
+	margin:0px 9px 0px 0px;
+	padding:0px 11px 0px 0px;
+	border-style:solid;
+	border-width:0px 1px 0px 0px;
+}
+#entry-author-info #author-avatar {top:0px; left:auto; right:0px;}
+#entry-author-info #author-description { margin: 0px 78px 10px 0px;}
+
+.commentlist .comment-author{ float:right;}
+.commentlist .comment-body{margin-right:80px; margin-left:0px;}
+.commentlist li.comment ul.children{margin:0 11% 0 0px;}
+
+.klasik-recentpost-widget .recent-thumb{margin:0px 0px 0px 18px; float:right;}
+.klasik-features .img-container img{float:right; margin:3px 0px 0px 20px;}
+
+#sidebar li li{padding:0 13px 5px 0px; background-image:url(images/listarrow-rtl.png); background-position:top right;}
+#footersidebar li li{ padding:0 13px 5px 0px; background-image:url(images/listarrow-rtl.png); background-position:top right;}
+
+/* Woocommerce */
+body.klasikt div.product .woocommerce-tabs ul.tabs, body.klasikt #content div.product .woocommerce-tabs ul.tabs{padding:0px 1em 0px 0px;}
+body.klasikt ul.products li.product{float: right; margin: 0 0 2.992em 3.8%;}
+body.klasikt ul.products li.last{margin-left:0px;}
+form.checkout .col2-set{overflow:hidden;}
